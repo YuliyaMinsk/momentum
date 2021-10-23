@@ -1,0 +1,30 @@
+.greeting-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
+  min-height: 50px;
+  width: 100vw;
+  @include font($font2, #{$font2 * 1.5}, 300);
+}
+
+.greeting {
+  flex: 1;  
+  padding: 10px;
+  text-align: right;
+}
+
+.name {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+  color: $color-light;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.name::placeholder {
+  color: $color-light;
+  opacity: 0.6;
+}
