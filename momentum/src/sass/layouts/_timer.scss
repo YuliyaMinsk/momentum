@@ -1,0 +1,13 @@
+.time {
+  display: block;
+  text-align: center;
+  min-height: 124px;
+  @include font($font1*3, #{$font1*3 * 1.5}, 300);
+}
+
+.date {
+  display: block;
+  text-align: center;
+  min-height: 28px;
+  @include font($font1, #{$font1 * 1.5}, 300);
+}
