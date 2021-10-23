@@ -7,16 +7,20 @@
 	<title>Momentum | Yuliya Niaverava - 2021 - RSSchool</title>
 </head>
 <body>
-	<header class="header">
-		<div class="language"></div>
-		<div class="options"></div>
-	</header>
+	<div class="loader">
+		<div class="loader_inner"></div>
+	</div>
 
 	<main class="main">
+
 		<div class="slider-background">
       <button class="slide-prev slider-icon"></button>
       <button class="slide-next slider-icon"></button>
     </div>
+
+		<div class="settings">
+			<button class="settings-icon"></button>
+		</div>
 
 		<section class="greetings-section">
 			<time class="time"></time>
@@ -28,7 +32,8 @@
 		</section>
 
 		<section class="weather-section">
-      <input type="text" class="city" />
+			<div class="weather-header"></div>
+      <input type="text" class="city" value="Минск"/>
       <i class="weather-icon owf"></i>
       <div class="weather-error"></div>
       <div class="description-container">

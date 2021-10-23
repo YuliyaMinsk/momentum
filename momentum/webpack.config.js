@@ -25,8 +25,7 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            favicon: './src/assets/favicon.ico',
-            inject: 'body'
+            favicon: './src/assets/favicon.ico'
         }),
         new CleanWebpackPlugin({
             cleanStaleWebpackAssets: false,

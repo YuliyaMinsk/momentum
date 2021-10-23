@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 50px;
   width: 100vw;
-  @include font($font2, #{$font2 * 1.5}, 300);
+  @include font($font2, #{$font2 * 1.5}, 400);
 }
 
 .greeting {

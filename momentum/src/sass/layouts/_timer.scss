@@ -2,12 +2,12 @@
   display: block;
   text-align: center;
   min-height: 124px;
-  @include font($font1, #{$font1 * 1.5}, 300);
+  @include font($font1, #{$font1 * 1.5}, 400);
 }
 
 .date {
   display: block;
   text-align: center;
   min-height: 28px;
-  @include font($font3, #{$font3 * 1.5}, 300);
+  @include font($font3, #{$font3 * 1.5}, 400);
 }

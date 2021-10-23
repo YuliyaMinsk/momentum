@@ -1,0 +1,38 @@
+.loader {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #242f3f;
+  overflow: hidden;
+}
+
+.loader_inner {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/icons/loader.svg");
+  background-size: 100px 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.loaded_hiding .loader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .loader {
+  display: none;
+}
