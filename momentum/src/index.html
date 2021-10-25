@@ -18,16 +18,26 @@
       <button class="slide-next slider-icon"></button>
     </div>
 
-		<div class="settings">
+		<section class="settings">
 			<button class="settings-icon"></button>
-		</div>
+			<form action="" class="settings-form" id="settings-form" >
+				<div class="language-box">
+					<p class="language-description"></p>
+					<input type="radio" id="language-rus" name="language" value="ru" checked>
+					<label for="language-rus">Rus</label>			
+					<input type="radio" id="language-en" name="language" value="en">
+					<label for="language-en">En</label>
+				</div>
+				<div>
+			</form>
+		</section>
 
 		<section class="greetings-section">
 			<time class="time"></time>
 			<date class="date"></date>
 			<div class="greeting-container">
 				<span class="greeting"></span>
-				<input type="text" class="name" placeholder="Ваше имя" />
+				<input type="text" class="name" placeholder="" />
 			</div>
 		</section>
 
@@ -52,14 +62,17 @@
       </div>
       <ul class="play-list"></ul>
     </section>
+
+		<section class="quote-section">
+			<button class="change-quote"></button>
+			<div>
+				<div class="quote"></div>
+				<div class="author"></div>
+			</div>
+		</section>
 	</main>
 
 	<footer class="footer">
-		<button class="change-quote"></button>
-		<div>
-      <div class="quote"></div>
-      <div class="author"></div>
-    </div>
 	</footer>
 </body>
 </html>

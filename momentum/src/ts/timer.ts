@@ -14,12 +14,23 @@ function showTime() {
 }
 
 function showDate() {
+  updateDate();
+  window.setTimeout(showDate, 1000);
+}
+
+export function updateDate() {
   const dateInTimer = document.querySelector('.date');
 
   const date = new Date();
   const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' } as const;
-  const currentDate = date.toLocaleDateString('ru-RU', dateOptions);
+  let currentDate;
+
+  const language = String((<HTMLInputElement>document.querySelector('input[name="language"]:checked')).value);
+  
+  switch (language) {
+    case 'ru': currentDate = date.toLocaleDateString('ru-RU', dateOptions); break;
+    case 'en': currentDate = date.toLocaleDateString('en-US', dateOptions); break;
+  }
 
   dateInTimer.textContent = currentDate;
-  window.setTimeout(showDate, 1000);
 }

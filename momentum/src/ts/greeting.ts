@@ -1,3 +1,4 @@
+import i18next from './i18n.js';
 import { getTimeOfDay } from './slider';
 
 export function runGreeting() {
@@ -19,10 +20,10 @@ function showGreeting() {
   let greetingText: string;
 
   switch (timeOfDay) {
-    case 'night': greetingText = "Доброй ночи, "; break;
-    case 'morning': greetingText = "Доброе утро, "; break;
-    case 'afternoon': greetingText = "Добрый день, "; break;
-    case 'evening': greetingText = "Доброго вечера, "; break;
+    case 'night': greetingText = i18next.t('greetings-night'); break;
+    case 'morning': greetingText = i18next.t('greetings-morning'); break;
+    case 'afternoon': greetingText = i18next.t('greetings-afternoon'); break;
+    case 'evening': greetingText = i18next.t('greetings-evening'); break;
   }
   
   greeting.textContent = greetingText;

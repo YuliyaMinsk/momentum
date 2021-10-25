@@ -21,3 +21,14 @@
     transform: rotate(180deg);
   }
 }
+
+.settings-form {
+  padding: 10px 10px 30px 10px;
+  border-radius: 10px; 
+  border: 3px solid $color-light;
+
+  opacity: 0;
+  &.opened {
+    opacity: 1;
+  }
+}

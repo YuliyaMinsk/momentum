@@ -54,7 +54,7 @@ const config = {
                 use: [stylesHandler, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|ico)$/i,
+                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|ico|json)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: './[path][name][ext]',

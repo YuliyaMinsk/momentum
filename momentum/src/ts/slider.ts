@@ -5,7 +5,7 @@ export function runSlider() {
   let slideChange: boolean = false;
   let currentSlide = Number(stringBG.substring(stringBG.length - 8, stringBG.length - 6));
   
-  setBackground(getRandomImage(20));
+  setBackground(getRandom(20));
 
   arrowPrev.addEventListener('click', function (event) {
     if (slideChange) {
@@ -53,7 +53,7 @@ export function getTimeOfDay(): string {
   return '';
 }
 
-function getRandomImage(max: number): number {
+export function getRandom(max: number): number {
   return Math.floor(Math.random() * (max) + 1);
 }
 
