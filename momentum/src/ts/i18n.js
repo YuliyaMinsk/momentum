@@ -4,11 +4,12 @@ i18n
   .init({
     fallbackLng: 'ru',
     whitelist: ['ru', 'en'],
-    debug: true,
+    debug: false,
     resources: {
       en: {
         translation: {
-          'language-description': 'Please select your preferred language:',
+          'language-description': 'Select your preferred language:',
+          'image-source-description': 'Select image background source:',
           'error-quote': 'Something went wrong',
           'error-author': 'Try to reload page!',
           'greetings-night': 'Good night, ',
@@ -23,7 +24,8 @@ i18n
       },
       ru: {
         translation: {
-          'language-description': 'Пожалуйста выберите язык:',
+          'language-description': 'Выберите язык:',
+          'image-source-description': 'Выберите источник фоновых изображений:',
           'error-quote': 'Что-то пошло не так',
           'error-author': 'Попробуйте перегрузите страницу!',
           'greetings-night': 'Доброй ночи, ',

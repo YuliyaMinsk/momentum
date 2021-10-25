@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
   @extend %font-primary;
   @include font($font5, #{$font5}, 300);
-  background: url("../assets/image/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
+  background: center/cover, rgba(32, 36, 41, 0.5);
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
   color: $color-light;

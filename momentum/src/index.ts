@@ -6,6 +6,7 @@ import { runTimer } from './ts/timer';
 import { runGreeting } from './ts/greeting';
 import { runWeather } from './ts/weather';
 import { getQuote } from './ts/quote';
+import { showEstimate} from './ts/estimate';
 
 // Run start blocks
 runSettings();
@@ -14,6 +15,7 @@ runTimer();
 runGreeting();
 runWeather();
 getQuote();
+showEstimate();
 
 document.querySelector('.change-quote').addEventListener('click', function (event) {
   getQuote();

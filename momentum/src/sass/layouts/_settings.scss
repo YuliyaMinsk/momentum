@@ -23,9 +23,14 @@
 }
 
 .settings-form {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+
   padding: 10px 10px 30px 10px;
   border-radius: 10px; 
   border: 3px solid $color-light;
+  background-color: rgba(0, 0, 0, 0.5);
 
   opacity: 0;
   &.opened {
