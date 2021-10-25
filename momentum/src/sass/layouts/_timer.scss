@@ -11,3 +11,13 @@
   min-height: 28px;
   @include font($font3, #{$font3 * 1.5}, 400);
 }
+
+@media (max-width: 768px) {
+  .time {
+    min-height: 50px;
+    @include font($font2, #{$font2 * 1.5}, 400);
+  }
+  .date {
+    @include font($font4, #{$font4 * 1.5}, 400);
+  }
+}

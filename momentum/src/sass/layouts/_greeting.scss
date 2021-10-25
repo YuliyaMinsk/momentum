@@ -1,30 +1,39 @@
 .greeting-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   min-height: 50px;
   width: 100vw;
   @include font($font2, #{$font2 * 1.5}, 400);
+  margin-bottom: 20px;
 }
 
 .greeting {
-  flex: 1;  
   padding: 10px;
   text-align: right;
 }
 
 .name {
-  flex: 1;
-  max-width: 50%;
+  max-width: 400px;
   text-align: left;
   color: $color-light;
   background-color: transparent;
-  border: 0;
+  border: 0;  
   outline: 0;
 }
 
 .name::placeholder {
   color: $color-light;
-  opacity: 0.6;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .greeting-container {
+    min-height: 30px;
+    @include font($font3, #{$font3 * 1.5}, 400);
+  }
+  .name {
+    text-align: center;
+  }
 }

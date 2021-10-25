@@ -4,11 +4,20 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV == 'production';
 
 
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
+
+const PATHS = { 
+    src: path.join(__dirname, './src'),
+    dist: path.join(__dirname, './dist'),
+    assets: path.join(__dirname, './src/assets'),
+    outputJS: './js/',
+    outputCSS: './css/'
+}
 
 
 
@@ -30,11 +39,20 @@ const config = {
         new CleanWebpackPlugin({
             cleanStaleWebpackAssets: false,
         }),
-        // new CopyPlugin({
-        //     patterns: [
-        //       { from: "./src/copy", to: "public" },
-        //     ],
-        // }),
+        new CopyPlugin({ 
+            patterns: [
+                // {
+                //    from: `${PATHS.assets}/`,
+                //    to: `${PATHS.dist}/assets/`,
+                // },
+                {
+                    from: "**/*.mp3",
+                    to({ context, absoluteFilename }) {
+                      return "./[path][name][ext]";
+                    },
+                },
+            ]
+        }),
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     ],

@@ -52,9 +52,9 @@ function loadSettings(): boolean {
 }
 
 function loadDescriptions() {
+  i18next.changeLanguage((<HTMLInputElement>document.querySelector('input[name="language"]:checked')).value);
   document.querySelector('.language-description').textContent = i18next.t('language-description');
   document.querySelector('.image-source-description').textContent = i18next.t('image-source-description');
-  i18next.changeLanguage((<HTMLInputElement>document.querySelector('input[name="language"]:checked')).value);
   (<HTMLInputElement>document.querySelector('.name')).placeholder = i18next.t('name-placeholder');
 }
 

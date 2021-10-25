@@ -20,7 +20,7 @@ export async function getQuote() {
     }
     const data = await res.json(); 
     
-    const randomNumber = getRandom(data.length);
+    const randomNumber = getRandom(data.length - 1);
     const quoteFromFile = data[randomNumber];
 
     quote.textContent = quoteFromFile["text"],

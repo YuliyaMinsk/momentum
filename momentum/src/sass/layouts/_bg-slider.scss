@@ -29,3 +29,9 @@
   right: 20px;
   background-image: url("../assets/icons/slider-next.svg");
 }
+
+@media (max-width: 768px) {
+  .slider-icon {
+    top: 80%;
+  }
+}
