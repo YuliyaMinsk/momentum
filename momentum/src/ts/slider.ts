@@ -19,7 +19,6 @@ export function runSlider() {
           else currentSlide--;  
           setBackground(currentSlide);
         } else {
-          console.log('random!!!');
           setBackground(getRandom(20));
         }
       }
@@ -44,7 +43,6 @@ export function runSlider() {
           else currentSlide++;
           setBackground(currentSlide);
         } else {
-          console.log('random!!!');
           setBackground(getRandom(20));
         }
       }
@@ -127,7 +125,10 @@ async function getFlickrAPICollection() {
 
   console.log(data);
   const image = new Image();
-  image.src = String(data.photos.photo[getRandom(data.photos.photo.length - 1)].url_o); 
+  const count = getRandom(19);
+  //image.src = String(data.photos.photo[getRandom(data.photos.photo.length - 1)].url_o); 
+  image.src = `http://farm${data.photos.photo[count].farm}.staticflickr.com/${data.photos.photo[count].server}/${data.photos.photo[count].id}_${data.photos.photo[count].secret}.jpg`; 
+  console.log(count, image.src);
 
   image.onload = () => {      
     document.body.style.backgroundImage = `url(${image.src})`;
