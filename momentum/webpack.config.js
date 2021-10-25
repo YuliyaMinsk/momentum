@@ -41,16 +41,16 @@ const config = {
         }),
         new CopyPlugin({ 
             patterns: [
-                // {
-                //    from: `${PATHS.assets}/`,
-                //    to: `${PATHS.dist}/assets/`,
-                // },
                 {
-                    from: "**/*.mp3",
-                    to({ context, absoluteFilename }) {
-                      return "./[path][name][ext]";
-                    },
+                   from: `${PATHS.assets}/`,
+                   to: `${PATHS.dist}/assets/`,
                 },
+                // {
+                //     from: "**/*.mp3",
+                //     to({ context, absoluteFilename }) {
+                //       return "./[path][name][ext]";
+                //     },
+                // },
             ]
         }),
         // Add your plugins here
