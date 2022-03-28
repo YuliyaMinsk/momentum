@@ -23,15 +23,17 @@
 .slide-prev {
   left: 20px;
   background-image: url("../assets/icons/slider-prev.svg");
+
+  @media (max-width: 768px) {
+    left: 10px;
+  }
 }
 
 .slide-next {
   right: 20px;
   background-image: url("../assets/icons/slider-next.svg");
-}
 
-@media (max-width: 768px) {
-  .slider-icon {
-    top: 80%;
+  @media (max-width: 768px) {
+    right: 10px;
   }
 }
