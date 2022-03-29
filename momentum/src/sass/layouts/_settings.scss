@@ -24,7 +24,7 @@
 
 .settings-form {
   position: fixed;
-  top: 100px;
+  top: -200px;
   right: 40px;
   z-index: 100;
 
@@ -36,6 +36,7 @@
 
   opacity: 0;
   &.opened {
+    top: 100px;
     opacity: 1;
   }
 
